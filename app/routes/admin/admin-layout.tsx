@@ -1,24 +1,21 @@
-import React from 'react'
-import { Outlet } from 'react-router'
+import { Outlet } from 'react-router';
+import { SidebarComponent } from "@syncfusion/ej2-react-navigations"
+import { NavItems } from 'components';
 
 const AdminLayout = () => {
   return (
-    <div className='flex w-full min-h-screen bg-gray-50'>
-      {/* Мобільна панель навігації */}
-      <div className='lg:hidden'>
-        {/* Тут має бути компонент MobileSidebar */}
-        <div className="p-4 bg-white shadow">Mobile Sidebar</div>
-      </div>
+    <div className="admin-layout">
+      {/* <MobileSidebar /> */}
 
-      {/* Десктопна бічна панель */}
-      <aside className='w-full max-w-[270px] hidden lg:block bg-white shadow'>
-        <div className="p-4">Sidebar</div>
+      <aside className="w-full max-w-[270px] hidden lg:block">
+        <SidebarComponent width={270} enableGestures={false}>
+          <NavItems />
+        </SidebarComponent>
       </aside>
 
-      {/* Основний контент */}
-      <main className='flex-1 p-4'>
+      <aside className="children">
         <Outlet />
-      </main>
+      </aside>
     </div>
   )
 }
