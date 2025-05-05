@@ -55,7 +55,7 @@ const Dashboard = () => {
       <section className="container">
         <h1 className="text-xl font-semibold text-dark-100">Created Trips</h1>
         <div className='trip-grid'>
-          <TripCard
+          {/* <TripCard
             // key={trip.id}
             id={""}
             name={"Trip to Bali"}
@@ -64,7 +64,7 @@ const Dashboard = () => {
             tags={["Adventure", "Relaxing"]}
             price={"2312"}
 
-          />
+          /> */}
         </div>
       </section>
     </section>
